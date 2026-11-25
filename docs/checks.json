@@ -1,0 +1,50 @@
+{
+  "method": "Node VM with minimal DOM stub; developer regression checks",
+  "checks": 11,
+  "results": [
+    {
+      "name": "Preview leaves poster and confirmed intent unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "Correction changes pending interpretation only",
+      "result": "PASS"
+    },
+    {
+      "name": "Application changes only registration style and confirms intent",
+      "result": "PASS"
+    },
+    {
+      "name": "Undo restores component and intent state while increasing revision",
+      "result": "PASS"
+    },
+    {
+      "name": "Discard leaves confirmed state unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "Unknown request asks for clarification without a preview",
+      "result": "PASS"
+    },
+    {
+      "name": "Selecting another component prevents stale application",
+      "result": "PASS"
+    },
+    {
+      "name": "Wrong base version is rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "Unsupported style is rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "A locked target is rejected by the state validator",
+      "result": "PASS"
+    },
+    {
+      "name": "Direct supported request produces a playful candidate",
+      "result": "PASS"
+    }
+  ]
+}

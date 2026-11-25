@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poster Co-Creation | Local Revision Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="eyebrow">IIS · Browser prototype</span><h1>Make AI suggestions visible, correctable and reversible</h1></div>
+    <span class="mode">Rule-based demo · Single session</span>
+  </header>
+  <main class="layout">
+    <section class="workspace" aria-labelledby="canvas-heading">
+      <div class="section-heading"><div><span class="eyebrow">Canvas</span><h2 id="canvas-heading">AI Society recruitment poster</h2></div><span id="version" class="version"></span></div>
+      <div id="canvas-grid" class="canvas-grid">
+        <div class="poster-wrap"><p class="poster-label">Current poster <span id="current-status"></span></p><div id="current-poster" class="poster"></div></div>
+        <div id="preview-wrap" class="poster-wrap preview-wrap" hidden><p class="poster-label">Proposed preview <strong>NOT APPLIED</strong></p><div id="preview-poster" class="poster"></div></div>
+      </div>
+      <p class="hint">Select a poster component to inspect it. The registration panel is selected for this demo; the title and illustration are locked.</p>
+    </section>
+    <aside class="controls" aria-label="Revision controls">
+      <div class="panel"><span class="eyebrow">01 / Selection</span><h2 id="selection-name"></h2><p id="selection-detail" class="muted"></p><div id="lock-state" class="lock-state"></div></div>
+      <div class="panel"><span class="eyebrow">02 / Your goal</span><label for="request">Revision request</label><input id="request" value="Make the registration panel stand out" autocomplete="off"><p class="muted small">This demo supports one local revision scenario. Unclear requests will prompt a question.</p><button id="propose" class="primary">Suggest a local change</button></div>
+      <div class="panel"><span class="eyebrow">03 / Interpretation and control</span><div id="intent" class="intent"></div><div id="proposal" class="proposal"></div><div id="actions" class="actions"></div></div>
+      <div class="panel"><span class="eyebrow">Session activity</span><p id="feedback" class="feedback" role="status" aria-live="polite"></p><button id="undo" class="secondary">Undo last applied change</button><ol id="history" class="history"></ol></div>
+    </aside>
+  </main>
+  <footer>Teaching prototype: fixed rules generate suggestions. No AI model or user study is involved.</footer>
+</body>
+</html>
